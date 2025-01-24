@@ -4,7 +4,7 @@ metadata:
   name: mediawiki-deployment
   labels:
     app: mediawiki
-    {{ toYaml .Values.label }}
+{{ toYaml .Values.label | indent 4 }}
 spec:
   replicas: 1
   selector:
