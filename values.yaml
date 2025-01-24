@@ -4,3 +4,7 @@ mediawiki:
 
 mysql:
   image: harbor.kakor.ovh/public/mysql:latest
+
+label: 
+  toto: tata
+  toto2: tata2
