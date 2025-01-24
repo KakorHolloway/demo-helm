@@ -1,0 +1,5 @@
+mediawiki:
+  image: harbor.kakor.ovh/public/mediawiki:latest
+
+mysql:
+  image: harbor.kakor.ovh/public/mysql:latest

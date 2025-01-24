@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: mediawiki
-        image: harbor.kakor.ovh/public/mediawiki:latest
+        image: {{ .Values.mediawiki.image }}
         ports:
         - containerPort: 80
         securityContext:

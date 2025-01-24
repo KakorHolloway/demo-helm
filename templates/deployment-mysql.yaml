@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: mysql
-        image: harbor.kakor.ovh/public/mysql:latest
+        image: {{ .Values.mediawiki.image }}
         ports:
         - containerPort: 3306
         env:
