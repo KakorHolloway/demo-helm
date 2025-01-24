@@ -4,9 +4,7 @@ metadata:
   name: mediawiki-deployment
   labels:
     app: mediawiki
-    {{- range $k, $v := .Values.label}}
-    {{ $k }} : {{ $v }}
-    {{- end}}
+    {{ toYaml .Values.label }}
 spec:
   replicas: 1
   selector:
