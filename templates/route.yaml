@@ -5,10 +5,10 @@ metadata:
 spec:
   host: mediawiki-correction.apps.openshift.kakor.ovh
   port:
-    targetPort: https
+    targetPort: 80
   tls:
     insecureEdgeTerminationPolicy: Redirect
-    termination: reencrypt
+    termination: edge
   to:
     kind: Service
     name: mediawiki
