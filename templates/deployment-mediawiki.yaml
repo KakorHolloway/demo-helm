@@ -34,5 +34,5 @@ spec:
           - name: MEDIAWIKI_DB_PASSWORD
             valueFrom:
               secretKeyRef:
-                name: mediawiki-password
+                name: mysql-password
                 key: password
