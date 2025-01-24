@@ -34,3 +34,7 @@ spec:
                 key: password
           - name: MYSQL_ROOT_PASSWORD
             value: mediawikipassword
+          {{ if .Values.mediawiki.addtoto }}
+          - name: toto
+            value: tata
+          {{ end }}

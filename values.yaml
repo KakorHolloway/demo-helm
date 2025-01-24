@@ -1,5 +1,6 @@
 mediawiki:
   image: harbor.kakor.ovh/public/mediawiki:latest
+  addtoto: true
 
 mysql:
   image: harbor.kakor.ovh/public/mysql:latest
