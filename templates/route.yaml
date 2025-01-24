@@ -1,9 +1,9 @@
 apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
-  name: mediawiki-gp-x
+  name: mediawiki-correction
 spec:
-  host: mediawiki-gp-x.apps.openshift.kakor.ovh
+  host: mediawiki-correction.apps.openshift.kakor.ovh
   port:
     targetPort: https
   tls:
@@ -11,6 +11,6 @@ spec:
     termination: reencrypt
   to:
     kind: Service
-    name: argocd-server
+    name: mediawiki
     weight: 100
   wildcardPolicy: None

@@ -23,7 +23,10 @@ spec:
           - name: MYSQL_DATABASE
             value: mediawiki
           - name: MYSQL_USER
-            value: mediawikiuser
+            valueFrom:
+              configMapKeyRef:
+                name: database     
+                key: user
           - name: MYSQL_PASSWORD
             valueFrom:
               secretKeyRef:

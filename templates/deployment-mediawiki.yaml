@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mediawiki-deployment
+  labels:
+    app: mediawiki
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mediawiki
+  template:
+    metadata:
+      labels:
+        app: mediawiki
+    spec:
+      containers:
+      - name: mediawiki
+        image: mediawiki:latest
+        ports:
+        - containerPort: 80
+        securityContext:
+          allowPrivilegeEscalation: true
+        env:
+          - name: MEDIAWIKI_DB_NAME
+            value: mediawiki
+          - name: MEDIAWIKI_DB_HOST
+            value: mysql
+          - name: MEDIAWIKI_DB_USER
+            valueFrom:
+              configMapKeyRef:
+                name: database     
+                key: user
+          - name: MEDIAWIKI_DB_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: mediawiki-password
+                key: password
