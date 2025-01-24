@@ -25,6 +25,9 @@ spec:
           - name: MYSQL_USER
             value: mediawikiuser
           - name: MYSQL_PASSWORD
-            value: mediawikipassword
+            valueFrom:
+              secretKeyRef:
+                name: mysql-password
+                key: password
           - name: MYSQL_ROOT_PASSWORD
             value: mediawikipassword
