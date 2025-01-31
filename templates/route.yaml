@@ -3,7 +3,7 @@ kind: Route
 metadata:
   name: mediawiki-correction
 spec:
-  host: mediawiki-correction.apps.openshift.kakor.ovh
+  host: mediawiki-argocd.apps.openshift.kakor.ovh
   port:
     targetPort: 80
   tls:
