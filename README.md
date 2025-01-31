@@ -14,7 +14,7 @@ Ajoutez deux nouveaux fichiers dans templates :
 - Un fichier PV.yaml
 - Un fichier PVC.yaml 
 
-Ces deux fichiers contiendrons la configuration d'un volume pour le pod mysql qui pointerons vers un serveur nfs à l'adresse suivante : 192.168.1.56/public/nfs-share-openshift/groupe-x
+Ces deux fichiers contiendrons la configuration d'un volume pour le pod mysql qui pointerons vers un serveur nfs à l'adresse suivante : 192.168.1.56/public/nfs-share-openshift/groupe-x (attention je suis en nfs 3)
 
 Cette configuration stockage, doit être présente seulement si la variable .Values.storage est égale à true. 
 
@@ -26,7 +26,7 @@ A NE PAS REFAIRE EN PRODUCTION
 
 Utilisez la vairbles à définir .Values.mysql.password  pour la renseigner dans le fichier secret.yaml (attention à la base64). 
 
-Créez un deployment phpmyadmin sur le modèle de mediawiki par exemple et exposez ce deployment avec un service et saa route associée. 
+Créez un deployment phpmyadmin sur le modèle de mediawiki par exemple et exposez ce deployment avec un service et saa route associée. (l'image c'est harbor.kakor.ovh/public/phpmyadmin:latest)
 
 Rendez moi les éléments complétés avec une documentation en markdown dans un fichier zip sur moncampus. 
 
