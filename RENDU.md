@@ -1,4 +1,5 @@
 # Guide utilisateur 
+ex: BELAUD, Benjamin, Paul dupont
 
 ## comment exécuter...
 Pour déployer la solution lancez la commande ''' helm ...'''
