@@ -27,6 +27,8 @@ spec:
             value: mediawiki
           - name: MEDIAWIKI_DB_HOST
             value: mysql
+          - name: MEDIAWIKI_DB_PORT
+            value: "3600"
           - name: MEDIAWIKI_DB_USER
             valueFrom:
               configMapKeyRef:
